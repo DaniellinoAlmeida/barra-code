@@ -1,7 +1,7 @@
 function scanBarcode() {
   window.plugins.barcodeScanner.scan( function(result){
     if(result.text == 280720550){ 
-      window.location.href="modelo.html";
+      window.location.href="modelo1.html";
        alert("Leitura do código  de barras\n" +
         "Resultado: " + result.text + "\n" +
         "Formato: " + result.format+ "\n" +
