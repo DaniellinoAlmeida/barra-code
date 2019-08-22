@@ -15,15 +15,17 @@
 
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>Código de Barra</h1>
+  <div onclick="scanBarcode()">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 id="cdbarra">Código de Barra</h1>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <button class="btn btn-success btn-block" onclick="scanBarcode()" >Iniciar leitura de Código</button>
+      <div class="row">
+        <div class="col-xs-12">
+          <label id="iniciar" onplay="tempo()"> Click na tela para iniciar </label>
+        </div>
       </div>
     </div>
   </div>
