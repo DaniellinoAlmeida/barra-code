@@ -39,7 +39,7 @@ function scanBarcode() {
         "Cancelado: " + result.cancelled);
     }
   }, function(error) {
-      alert("Scanning failed: " + error);
+      alert("Erro no scanner: " + error);
   },
    {
           preferFrontCamera : false,
