@@ -6,7 +6,33 @@ function scanBarcode() {
         "Resultado: " + result.text + "\n" +
         "Formato: " + result.format+ "\n" +
         "Cancelado: " + result.cancelled);
-    }if(result.text != 280720550) {
+    }
+
+    if(result.text == 989895555){ 
+      window.location.href="modelo2.html";
+       alert("Leitura do código  de barras\n" +
+        "Resultado: " + result.text + "\n" +
+        "Formato: " + result.format+ "\n" +
+        "Cancelado: " + result.cancelled);
+    }
+
+    if(result.text == 85236987){ 
+      window.location.href="modelo3.html";
+       alert("Leitura do código  de barras\n" +
+        "Resultado: " + result.text + "\n" +
+        "Formato: " + result.format+ "\n" +
+        "Cancelado: " + result.cancelled);
+    }
+    
+    if(result.text == 85369877444){ 
+      window.location.href="modelo4.html";
+       alert("Leitura do código  de barras\n" +
+        "Resultado: " + result.text + "\n" +
+        "Formato: " + result.format+ "\n" +
+        "Cancelado: " + result.cancelled);
+    }
+
+    if(result.text != 280720550 && result.text != 989895555 && result.text != 85236987 && result.text != 85369877444) {
       alert("Código não identificado !\nLeitura do código  de barras\n" +
         "Resultado: " + result.text + "\n" +
         "Formato: " + result.format+ "\n" +
@@ -16,17 +42,17 @@ function scanBarcode() {
       alert("Scanning failed: " + error);
   },
    {
-          preferFrontCamera : false, // iOS and Android
-          showFlipCameraButton : true, // iOS and Android
-          showTorchButton : true, // iOS and Android
-          torchOn: false, // Android, launch with the torch switched on (if available)
-          saveHistory: false, // Android, save scan history (default false)
-          prompt : "Place a barcode inside the scan area", // Android
-          resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
-          formats : "QR_CODE,PDF_417,CODE_39", // default: all but PDF_417 and RSS_EXPANDED
-          orientation : "portrait", // Android only (portrait|landscape), default unset so it rotates with the device
-          disableAnimations : true, // iOS
-          disableSuccessBeep: false // iOS and Android
+          preferFrontCamera : false,
+          showFlipCameraButton : true,
+          showTorchButton : true,
+          torchOn: false,
+          saveHistory: false,
+          prompt : "Place a barcode inside the scan area",
+          resultDisplayDuration: 500,
+          formats : "QR_CODE,PDF_417,CODE_39",
+          orientation : "portrait",
+          disableAnimations : true,
+          disableSuccessBeep: false
         }
   );
 }
